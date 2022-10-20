@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Welcome to ANDHRA'S RESTUARANT</title>
+
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="ahuna.jfif" rel="icon">
+
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+<style>
+  #hero {
+  width: 100%;
+  height: 100vh;
+  background: url('1.jpg') top center;
+  background-size: cover;
+  position: relative;
+  padding: 0;
+}
+
+#hero:before {
+  content: "";
+  background: rgba(53, 52, 52, 0.562);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero .container {
+  padding-top: 110px;
+}
+
+@media (max-width: 992px) {
+  #hero .container {
+    padding-top: 98px;
+  }
+}
+
+#hero h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+#hero h1 span {
+  color: #b17610;
+}
+
+#hero h2 {
+  color: #eee;
+  margin-bottom: 10px 0 0 0;
+  font-size: 22px;
+}
+
+#hero .btns {
+  margin-top: 30px;
+}
+
+#hero .btn-menu, #hero .btn-book {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: 0.3s;
+  line-height: 1;
+  color: white;
+  border: 2px solid #cda45e;
+}
+
+#hero .btn-menu:hover, #hero .btn-book:hover {
+  background: #cda45e;
+  color: #fff;
+}
+
+#hero .btn-book {
+  margin-left: 15px;
+}
+
+#hero .play-btn {
+  width: 94px;
+  height: 94px;
+  background: radial-gradient(#cda45e 50%, rgba(205, 164, 94, 0.4) 52%);
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero .play-btn::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  z-index: 100;
+  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+#hero .play-btn::before {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation: pulsate-btn 2s;
+  animation: pulsate-btn 2s;
+  -webkit-animation-direction: forwards;
+  animation-direction: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: steps;
+  animation-timing-function: steps;
+  opacity: 1;
+  border-radius: 50%;
+  border: 5px solid rgba(205, 164, 94, 0.7);
+  top: -15%;
+  left: -15%;
+  background: rgba(198, 16, 0, 0);
+}
+
+#hero .play-btn:hover::after {
+  border-left: 15px solid #cda45e;
+  transform: scale(20);
+}
+
+#hero .play-btn:hover::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border: none;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  z-index: 200;
+  -webkit-animation: none;
+  animation: none;
+  border-radius: 0;
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 992px) {
+  #hero .play-btn {
+    margin-top: 30px;
+  }
+}
+
+@media (max-height: 500px) {
+  #hero {
+    height: auto;
+  }
+  #hero .container {
+    padding-top: 130px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@-webkit-keyframes pulsate-btn {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+@keyframes pulsate-btn {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+</style>
+
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+
+
+
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo mr-auto"><a href="index.html">ANDHRA'S RESTURANT</a></h1>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#varieties">Varieties</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <!-- <li class="book-a-table text-center"><a href="#book-a-table">Book a table</a></li> -->
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative text-center text-lg-left" data-aos="zoom-in" data-aos-delay="100">
+      <div class="row">
+        <div class="col-lg-8">
+          <h1>Welcome to <span>ANDHRA'S RESTURANT</span></h1>
+          <h2>We are Best in delivering great food.</h2>
+
+          <div class="btns">
+            <a href="#menu" class="btn-menu animated fadeInUp scrollto">Our Menu</a>
+            <a href="#book-a-table" class="btn-book animated fadeInUp scrollto">Book a Table</a>
+          </div>
+        </div>
+        <div class="col-lg-4 d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-delay="200">
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+
+
+
+    <section id="why-us" class="why-us">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2></h2>
+          <p>Why Choose Our Restaurant</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4">
+            <div class="box" data-aos="zoom-in" data-aos-delay="100">
+              <span>01</span>
+              <h4>Best Tasty Food </h4>
+              <p>We are always try to give tasty food to our customesr in cheap rate. Our Resturant is best In ANDHRA
+                PRADESH</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" data-aos="zoom-in" data-aos-delay="200">
+              <span>02</span>
+              <h4>Quality Assurance</h4>
+              <p>Quality of food is very very important for our good health So we take care about this and make healthy
+                foods for People in Andhra pradesh </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" data-aos="zoom-in" data-aos-delay="300">
+              <span>03</span>
+              <h4> Fresh Foods</h4>
+              <p>Fresh Foods plays important role for good digestive system .We also gives complementry food to the
+                customers.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+            <div class="about-img">
+              <img src="Rest1.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h3>One of the best Resturatnt In ANDHRA PRADESH.</h3>
+
+
+            <p>
+              One of the most popular in the Andhra pradesh, Andhra's resturant withheld a large hall that can
+              accommodate more than 150 people at a given time. Famous for its a huge pot biriyani . Apart from the
+              famed chops, the menu includes chicken pakoda, chicken dum biriyani or chicken curry, roti, pulka, aloo
+              parota, manchurian, noodles, burgers, biscuits and cakes, and of course tea, coffee , aerated drinks,
+              samosas,spring and other snacks at a reasonably low price, the hotel serves as a perfect place for
+              foodies.
+
+              ANDHRA'S resturant , located in Krishna district vijayawada, has an exceptionally huge place for
+              gatherings. But it is the only resturant that is considered the favourite hangout zone by people.It has a
+              wide variety of games in the restaurent back place for enjoyment A wide variety of food is in the offering
+              at the lowest rates and keeps people pretty pleased. The spacious restaurent is seen as the hub of all
+              activities with people who get to break free from routine life to have a amazing food.
+
+
+
+
+
+
+
+
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <section id="menu" class="menu section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Order Food</h2>
+          <p>Check Our Wonderful Menu</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+
+          </div>
+        </div>
+
+        <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-6 menu-item ">
+            <img src="mutton.jfif" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Chicken Biryani</a><span>Rs.250</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item ">
+            <img src="ahuna.jfif" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Gongura Mutton</a><span>Rs 650</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item ">
+            <img src="veg.jfif" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Paneer Mandi</a><span>Rs 170</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item">
+            <img src="egg.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Egg Biryani</a><span>Rs. 130</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item ">
+            <img src="lollipop.jfif" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Chicken Lollipop</a><span>Rs 350</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item ">
+            <img src="dosa.webp" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Dosa</a><span>Rs 120</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item ">
+            <img src="chickenchow.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Chicken Chowmein</a><span>Rs 150</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item ">
+            <img src="indiamthali.webp" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Indian Thali</a><span>Rs 140</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item ">
+            <img src="chickenbhuna.jfif" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#"> Chettinad Chicken</a><span>Rs 280</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="specials" class="specials">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Specials</h2>
+          <p>Check Our Specials</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-toggle="tab" href="#tab-1">Dum mutton Biryani</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tab-2">Gongura Mutton</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tab-3">Chicken Lollipop+chilli Chicken Combo+cold Drink</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tab-4">Veg Biryani</a>
+              </li>
+
+            </ul>
+          </div>
+          <div class="col-lg-9 mt-4 mt-lg-0">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Most Favourite Food among Students</h3>
+                    <p class="font-italic"></p>
+                    <p>Is there anything more rewarding than a well-made mutton dum biriyani? Crispy carrots, green
+                      French beans, fresh sautéed bell peppers, and a nice fried mutton, you just cannot go wrong with
+                      this one! Take things to the next level, with the zingy, zesty spices; and the gorgeous fried
+                      mutton on top really makes the dish sing.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="egg.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-2">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Gongura Mutton</h3>
+                    <p class="font-italic"></p>
+                    <p> This dish is made both in Andhra and Telangana. Mostly made in Andhra, it is very simple to make
+                      and require a few ingredients only. If the Mutton is cooked well with proportionate Salt and
+                      Chilli powder, you get a perfect taste.
+
+                      It is generally made in the same method by all Telugu people. Ingredients differ depending upon
+                      the region. I am following Guntur Style Curry here.This is an age old recipe.
+
+                      The dish served in Restaurants is slightly different as they mix Mutton and Sorrel once the order
+                      has been placed so the Mutton doesn't absorb the sourness from the leaves and may taste bland.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="ahuna.jfif" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-3">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>One of the Best Starter</h3>
+                    <p class="font-italic">Chicken Lollipop (1 Pcs.)+Chilly Chicken(8pc)+Cold drink (300 ml). this is a
+                      combo pack. this is one of favorite served pack which is available at low of cost. you should try
+                      this combo pack because the taste of chicken lollipop and chilli chicken is so nice.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="lollipop.jfif" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-4">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Veg Biryani</h3>
+                    <p class="font-italic"></p>
+                    <p>Biryani is a celebratory dish popular in many countries. A traditional biryani has layers of
+                      marinated meat and fragrant rice, dum cooked with caramelized onions, spices, herbs and
+                      saffron-infused milk. Making a good biryani, especially the traditional method requires time and
+                      patience since it involves a series of steps like marination, cooking biryani gravy, parcooking
+                      rice, layering and lastly dum cooking.
+                    </p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="veg.jfif" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+    </section>
+
+
+
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+
+          <p>What people saying about us</p>
+        </div>
+
+        <div class="owl-carousel testimonials-carousel" data-aos="zoom-in" data-aos-delay="100">
+
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              This restaurant has left the best impressions! Hospitable hosts, delicious dishes, beautiful presentation,
+              wonderful dessert. I recommend to everyone!
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="ravi.JPG" class="testimonial-img" alt="">
+            <h3>Ravi</h3>
+
+          </div>
+
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              It’s a great experience. The ambiance is very welcoming and charming. Amazing wines, food and service.
+              Staff are extremely knowledgeable and make great recommendations.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="kousik.JPG" class="testimonial-img" alt="">
+            <h3>Kousik</h3>
+
+          </div>
+
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              YOU have to go! It’s the cutest little spot with amazing food. The (FN) is to die for. IT WAS FIRE!! The
+              service we received was so amazing and we will definitely be back again. They made us feel welcomed and
+              gave us an amazing experience.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="venkat.JPG" class="testimonial-img" alt="">
+            <h3>venkat</h3>
+
+          </div>
+
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              We are so fortunate to have this place just a few minutes drive away from home. Food is stunning, both the
+              tapas and downstairs restaurant. Cocktails wow, wine great and lovely selection of beers. Love this place
+              and will continue to visit.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="sai.JPG" class="testimonial-img" alt="">
+            <h3>sai</h3>
+
+          </div>
+
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              . Excellent food. Menu is extensive and seasonal to a particularly high standard. Definitely fine dining.
+              It can be expensive but worth it and they do different deals on different nights so it’s worth checking
+              them out before you book. Highly recommended.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="babith.JPG" class="testimonial-img" alt="">
+            <h3>babith</h3>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+
+    <section id="gallery" class="gallery">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Gallery</h2>
+          <p>Some photos from Our Restaurant</p>
+        </div>
+      </div>
+
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+
+              <img src="download.JPG" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="gallery-2.jpg" class="venobox" data-gall="gallery-item">
+                <img src="gallery-2.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="gallery-3.jpg" class="venobox" data-gall="gallery-item">
+                <img src="gallery-3.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="gallery-4.jpg" class="venobox" data-gall="gallery-item">
+                <img src="gallery-4.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="gallery-5.jpg" class="venobox" data-gall="gallery-item">
+                <img src="gallery-5.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="gallery-6.jpg" class="venobox" data-gall="gallery-item">
+                <img src="gallery-6.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="gallery-7.jpg" class="venobox" data-gall="gallery-item">
+                <img src="gallery-7.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="gallery-8.jpg" class="venobox" data-gall="gallery-item">
+                <img src="gallery-8.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+
+          <p>Contact Us</p>
+        </div>
+      </div>
+
+      <div data-aos="fade-up">
+        <iframe style="border:0; width: 100%; height: 350px;"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7650.097279560417!2d80.6148706!3d16.5236419!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35f01e63539d21%3A0x71a2c954de88ca67!2sPSCMR%20College%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1665895885288!5m2!1sen!2sin"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="icofont-google-map"></i>
+                <h4>Location:</h4>
+                <p> Kothapet vijayawada
+                  Andhra pradesh, India</p>
+              </div>
+
+              <div class="open-hours">
+                <i class="icofont-clock-time icofont-rotate-90"></i>
+                <h4>Open Hours:</h4>
+                <p>
+                  Monday-Sunday:<br>
+                  11:00 AM - 10:00 PM
+                </p>
+              </div>
+
+              <div class="email">
+                <i class="icofont-envelope"></i>
+                <h4>Email:</h4>
+                <p>contact@Andhra restaurent.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="icofont-phone"></i>
+                <h4>Call:</h4>
+                <p>123456789</p>
+              </div>
+
+            </div>
+
+          </div>
+
+    </section>
+
+  </main>
+
+
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>ANDHRA RESTUARANT</h3>
+              <p>
+                KOTHAPET <br>
+                VIJAYAWADA, India<br><br>
+                <strong>Phone:</strong> 123456789<br>
+                <strong>Email:</strong> contact@andhra Resturant.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms and service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Events</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Bithday party</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Night Party</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Ceremony</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Cadle Night Dinner</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Want a call From Us</h4>
+            <p>Feel Free to call and get help with us</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Want a Call">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Andhra Resturant</span></strong>. by Tarun savva
+      </div>
+      <div class="credits">
+
+
+      </div>
+    </div>
+  </footer>
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+
+
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
