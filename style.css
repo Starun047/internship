@@ -1072,7 +1072,7 @@ section {
 # Events
 --------------------------------------------------------------*/
 .events {
-  background: events-bg.jpg center center no-repeat;
+  background: url(events-bg.jpg) center center no-repeat;
   background-size: cover;
   position: relative;
 }
